@@ -1,0 +1,44 @@
+.container{
+    display: flex;
+}
+.category-layout{
+    width: 30%;
+}
+.products{
+    width: 70%;
+}
+.header{
+    padding: 0 40px;
+}
+.category-layout{
+    border: 2px solid rgb(83, 50, 50);
+}
+.combo{
+    background-color: rgb(83, 50, 50);
+    color: aliceblue;
+}
+.drink{
+    background-color: rgb(83, 50, 50);
+    color: aliceblue;
+}
+.header-items{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.nav-link{
+
+}
+.link-user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+    margin-left: 88px;
+}
+.main-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 40px;
+}
