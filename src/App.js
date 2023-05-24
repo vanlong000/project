@@ -9,10 +9,8 @@ import { Routes } from 'react-router-dom';
 import Contact from './pages/Contact';
 import CartPage from './pages/CartPage';
 import Menu from './pages/Menu';
+import ProductDetails from './pages/ProductDetails';
 
-import Product_details1 from './pages/Product_details1';
-import Product_details3 from './pages/Product_details3';
-import Product_details2 from './pages/Product_details2';
 
 // import { BrowserRouter, useLocation } from "react-router-dom";
 
@@ -26,13 +24,10 @@ function App() {
     <Route path="/Menu" element={<Menu/>}/>
     <Route path="/BlogDetail" element={<BlogDetail/>}/>
     <Route path="/Contact" element={<Contact/>}/>
-    
     <Route path="/Cartpage" element={<CartPage/>}></Route>
-    <Route path="/product_details2" element={<Product_details2 />}/>
-    <Route path="/product_details1" element={<Product_details1 />}/>
-    <Route path="/product_details3" element={<Product_details3 />}/>
+    <Route path="/product_details/:id" element={<ProductDetails />}/>
     </Routes>
-    <Footer/>
+    <Footer/> 
     </div>
   )
 }

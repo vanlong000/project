@@ -4,8 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { useRef } from "react";
 import Menu from "../../pages/Menu";
+import { useSelector } from "react-redux";
 
 function Header(props) {
+    const { cart } = useSelector((state) => state.carts);
+
     const ref = useRef(null);
     const showModal = () => {
         const element = ref.current;
@@ -17,6 +20,7 @@ function Header(props) {
         const element = ref.current;
         element.style.display = 'none';
     }
+
     return (
         <React.Fragment>
             <div className="navbar navbar-expand-lg bg-white shadow-lg">
@@ -60,9 +64,16 @@ function Header(props) {
                         </ul>
                     </div>
 
-                    <div className="  d-flex flex-row-reverse">
+                    <div className="nav-right  d-flex flex-row-reverse">
                         <button type="button" className="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModal" onClick={showModal}>ĐẶT BÀN</button>
+                        <div className="iconCart">
+                        {cart.length === 0 ? "" :  <div className="countItem">
+                             <span>{cart.length === 0 ? "" : cart.length} </span>
+                    </div>}
+                   
                         <NavLink className="my-auto" to="./Cartpage"><FontAwesomeIcon className="me-3 fs-4" icon={faCartShopping} style={{ color: "#000000" }} /></NavLink>
+                        </div>
+                 
                     </div>
                     <div className="modal fade show" id="BookingModal " ref={ref} tabindex="-1" aria-labelledby="BookingModal" aria-hidden="true" onClick={closeModal}>
                         <div className="modal-dialog modal-dialog-centered modal-xl">
