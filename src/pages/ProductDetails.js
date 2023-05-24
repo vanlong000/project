@@ -14,8 +14,6 @@ function ProductDetails(){
       <>
                 <div  className="nav-link"  class="menu-thumb">
                     <div className="main-item-detail">
-
-                   
          <img src={product.img} class="img-fluid menu-image" alt=""/>
            <div class="menu-info  align-items-center">
                <h4 class="mb-0">{product.nameFood}</h4>
