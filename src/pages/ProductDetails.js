@@ -1,22 +1,29 @@
 import React, { useEffect } from "react";
-import { products } from "../product";
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../redux/slice/cartSlice";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { getById } from "../redux/slice/getProductSlice";
 function ProductDetails(){
-  let { id } = useParams();
+  let params = useParams();
   const dispatch = useDispatch();
-
-  let product = products.find((product) => product.id === parseInt(id));
+  useEffect(() => {
+    dispatch(getById(params.id));
+  }, [params]);
+  const { productId } = useSelector((state) => state.products);
+    if(productId === 0 ) return <h1>undfind</h1>
     return(
       <>
-                <div  className="nav-link"  class="menu-thumb">
+     {
+      productId?.map((productId,index)=>{
+        console.log(productId);
+        return <>
+              <div key={index}  className="nav-link"  class="menu-thumb">
                     <div className="main-item-detail">
-         <img src={product.img} class="img-fluid menu-image" alt=""/>
+         <img src={productId?.img} class="img-fluid menu-image" alt=""/>
            <div class="menu-info  align-items-center">
-               <h4 class="mb-0">{product.nameFood}</h4>
+               <h4 class="mb-0">{productId?.nameFood}</h4>
                 <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>24.50</span>
                    <div class="d-flex flex-wrap align-items-center w-100 mt-2">
                     <h6 class="reviews-text mb-0 me-3">4.4/5</h6>
@@ -27,11 +34,11 @@ function ProductDetails(){
                        <i class="bi-star-fill reviews-icon"></i>
                        <i class="bi-star reviews-icon"></i>
                     </div>
-                    <p class="reviews-text mb-0 ms-4">{product.reviewDemo} Reviews</p>
+                    <p class="reviews-text mb-0 ms-4">{productId?.reviewDemo} Reviews</p>
                    </div>
                    <div>
                     <button onClick={
-                         ()=>{dispatch(addToCart(product),toast("thêm sản phẩm thành !"))}
+                         ()=>{dispatch(addToCart(productId),toast("thêm sản phẩm thành !"))}
                     }>
                         add cart
                     </button>
@@ -39,6 +46,9 @@ function ProductDetails(){
            </div>
            </div>
          </div>
+        </>
+      })
+     }
          <ToastContainer position="top-center"
                 autoClose={3000}
                 hideProgressBar={false}
@@ -49,10 +59,7 @@ function ProductDetails(){
                 draggable
                 pauseOnHover
                 theme="light" />
-
       </>
-  
-       
     )
 }
 export default ProductDetails;

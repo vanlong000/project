@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink} from 'react-router-dom';
 import Header from "../Components/ShareComponents/Header";
 import './body.css';
-import { products } from "../product";
+import { useDispatch, useSelector } from "react-redux";
+import { getFectProdust } from "../redux/slice/getProductSlice";
 function Menu (props){
-   
+  const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getFectProdust());
+      }, []);
+  const { products } = useSelector((state) => state.products);
+        if(products === 0 ) return <h1>undfind</h1>
         return(
             <div className="menu">
             
@@ -52,7 +59,7 @@ function Menu (props){
                             <div class="row">
                             <h4 class="mb-0"> mon an noi bat</h4>
 
-                                    {products.map((product,index)=>{
+                                    {products?.map((product,index)=>{
                                      return   <>
                                            <div key={index} class="col-lg-4 col-md-6 col-12">
                                  <NavLink className="nav-link" to={`/product_details/${product.id}`} class="menu-thumb">
