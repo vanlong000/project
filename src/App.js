@@ -17,10 +17,7 @@ import { getFectProdust } from './redux/slice/getProductSlice';
 // import { BrowserRouter, useLocation } from "react-router-dom";
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getFectProdust());
-  }, []);
+
   return (
     <div>
     <Header/>
