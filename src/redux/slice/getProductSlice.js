@@ -17,7 +17,14 @@ export const getFectProdust = createAsyncThunk(
       const responsive = await axios.get(
         'https://reactjst3h2212-default-rtdb.firebaseio.com/products/.json'
       );
-      return responsive.data;
+      const myArr1 = [];
+
+    for (let newItem in responsive.data) {
+      myArr1.push(responsive.data[newItem]);
+    }
+    console.log(myArr1);
+    return myArr1;
+      
     } catch (error) {
       console.log(error);
     }

@@ -102,3 +102,27 @@
 .menu-info{
 
 }
+.price-tag{
+    background: var(--white-color);
+    border-radius: 100px;
+    color: var(--secondary-color);
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-semibold);
+    display: inline-block;
+    width: unset;
+    height: 30px;
+    /* line-height: 64px; */
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+ .nav-link{
+    height: 100px;
+}
+.info-item-main{
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+}
