@@ -1,128 +1,171 @@
 .container{
     display: flex;
+    
 }
 .category-layout{
-    width: 30%;
+    width: 25%;
 }
 .products{
-    width: 70%;
-    padding: 20px;
-    padding-top: 0;
+    width: 100%;
 }
 .header{
-    padding: 0 40px;
-}
-.category-layout{
-    border: 2px solid rgb(83, 50, 50);
-}
+    padding: 0 0px;
+    
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-simple-gradient-beautiful-gradient-poster-image_30641.jpg')
+
+} 
+
 .combo{
-    background-color: rgb(83, 50, 50);
-    color: aliceblue;
+    
+    background-color: rgb(234, 233, 242);
+    color: rgba(17, 10, 10, 0.973);
+    text-align: center;
+    padding: 0;
+    margin: 8px;
 }
-.drink{
-    background-color: rgb(83, 50, 50);
-    color: aliceblue;
+.menu-item5555 li:hover {
+    background:#981B1E;
+    
 }
-.header-items{
+
+.menu-item-5577{
+    padding: 9px 102px;
+    margin: 2px;
+    display: flex;  justify-content: center;
+}
+.item5556 {
+    display: flex;  
+    justify-content: center;
+}
+.item5557
+    {
+        display: flex;  
+        justify-content: center;
+    }
+
+#menu-item-6000{
+    color: white;
+    background: #b4abab;
+    
+}
+
+
+
+ .header-items{
+
     display: flex;
+    padding: 0;
     justify-content: center;
     align-items: center; 
-}
-.nav-link{
+    height: 550px;
+    width: 100%;
+    color: rgb(230, 81, 17);
+    background-image: url('https://botoquanmoc.com/images/banners/original/41-1_1684742862.jpg')
 
+} 
+
+.tatca{
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: all 0.3s linear 0s;
+    cursor: pointer;
+    float: left;
 }
+
+
+
 .link-user{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 240px;
-    width: 100%;
-    margin-left: 88px;
+    width: 25%;
+    
 }
-.main-detail{
+ .main-detail{
     display: flex;
     justify-content: space-between;
     align-items: start;
     margin: 40px;
-}
-.item-img img{
-         width: 100%;   
-         height: 100px;
-         width: 100px;
-         margin-right: 20px;
-}
-.item-img{
-    max-width: 200px;
-}
-.item-cart{
-    display: flex;
-    border: 1px solid gray;
-    padding: 20px;
-}
-.bodyCart{
-    margin: 50px 0;
-}
-.info-item{
-    margin-right: 20px;
-    width: 80%;
-}
-.main-cart{
-    margin-bottom: 20px;
-}
-.iconCart{
-    position: relative;
-}
-.iconCart .iconCart{
-
-}
-.countItem{
-    position: absolute;
-    top: -10px;
-    right: 5px;
-    background: red;
-    padding: 4px;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
+} 
+.detail1{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
-.countItem span{
-    font-size: 12px;
-    color: #fff;
-}
-.nav-right{
+.link-user2{
+    display: flex;
+    float: left;
     align-items: center;
     justify-content: space-between;
+    width: 35%;
+    margin-left: 88px;
 }
-.main-item-detail{
-    display: flex;
+ 
+th{
+    
+    width: 80%;
+    
 }
-.menu-info{
+
+    
+   
+.buy_area{
+    background: rgb(211, 208, 43);
+    width: 50%;
+    padding: auto;
 
 }
-.price-tag{
-    background: var(--white-color);
-    border-radius: 100px;
-    color: var(--secondary-color);
-    font-size: var(--menu-font-size);
-    font-weight: var(--font-weight-semibold);
-    display: inline-block;
-    width: unset;
-    height: 30px;
-    /* line-height: 64px; */
-    /* text-align: center; */
+.plusss{
+    text-align: center;
+}
+
+
+ul{
+    list-style: none;
+}
+
+  
+
+.price-tag {
+    width: 140px; 
+}
+h5{
+    text-align: center;
+     background-color: rgb(242, 233, 233); 
+}
+.price-tag {
+    text-align: center;
+}
+.product-image{
+    height: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
+
 }
- .nav-link{
-    height: 100px;
+.product1-1{
+    padding: 0px;
 }
-.info-item-main{
-        display: flex;
-        justify-content: center;
-        align-items: center ;
+.list-category div{
+        margin-left: 20px;  
+
+}
+.item5555{
+    display: flex;
+
+}
+button {
+    
+    background-Color : rgba(255, 100, 100, 0.85);
+    padding: '2px 10px';
+    color: 'white';
+     border-radius: 2; 
+     width: 100%;  
+}
+.menu-image1{
+    height: 297px;
+    width: 100%;
+}
+.Name{
+    text-align: center;
 }

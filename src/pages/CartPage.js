@@ -34,9 +34,6 @@ export default function CartPage() {
                                      <div className="item-price">
                               {itemCart.price}
                                 </div>
-                                <div>
-                                    {/* {itemCart.qauntity ? itemCart.qauntity : 'rong'} so luong */}
-                                </div>
                         </div>
                             <div>
                                 <button onClick={()=>{dispatch(deleteCart(itemCart))}}>
