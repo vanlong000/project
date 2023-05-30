@@ -5,6 +5,8 @@
        "img": "../images/product/chef.jpg",
         "nameFood": "Thăn Nội Wagyu",
         "price": 1390000,
+        "nameFood": "Fresh Start",
+        "price": 10.922222222222
         "start": "01/01/2023",
         "review": "Đánh giá sản phẩm 1",
         "reviewDemo": 20,

@@ -43,9 +43,8 @@ function Menu (props){
       }, []);
 
   const { products } = useSelector((state) => state.products);
-
   const { listcategory } = useSelector((state) => state.products);
-  if(listcategory === 0 ) return <h1>undfind</h1>
+
 
         if(products === 0 ) return <h1>undfind</h1>
         return(
