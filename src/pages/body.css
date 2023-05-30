@@ -169,3 +169,31 @@ button {
 .Name{
     text-align: center;
 }
+.tab-for-me{
+    display: flex;
+}
+.iconCart{
+    position: relative;
+     
+}
+.countItem{
+    position: absolute;
+    top: -10px;
+    right: 10px; 
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:4px;
+}
+.countItem{
+    color: #fff;
+
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+}

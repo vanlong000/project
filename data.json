@@ -169,7 +169,9 @@
         "price": 350000,
         "start": "03/01/2023",
         "review": "Đánh giá sản phẩm 3",
-        "reviewDemo": 48
+        "reviewDemo": 48,
+        "name":"COMBO"
+
       },
       {
         "id": 5,
@@ -250,7 +252,8 @@
         "price": 160.000,
         "start": "03/01/2023",
         "review": "Đánh giá sản phẩm 3",
-        "reviewDemo": 48
+        "reviewDemo": 48,
+        "name":"TRÁNG MIỆNG"
       }
       ,
       {
@@ -260,7 +263,8 @@
         "price": 12.99,
         "start": "03/01/2023",
         "review": "Đánh giá sản phẩm 3",
-        "reviewDemo": 48
+        "reviewDemo": 48,
+        "name":"TRÁNG MIỆNG"
       }
   ],
   "categories":[

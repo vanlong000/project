@@ -51,29 +51,7 @@ function Menu (props){
         return(
             
             <div className="menu">
-                <div>
-            <ul className="tabs-menu">
-                {tabsData.map((tab, index) => (
-                <li
-                    key={tab.id}
-                    className={activeTab === index ? 'active' : ''}
-                    onClick={() => handleTabClick(index)}
-                >
-                    {tab.title}
-                </li>
-                ))}
-            </ul>
-
-      <div className="tab-content">
-        {tabsData.map((tab, index) => (
-          <div key={tab.id} className={activeTab === index ? 'active' : 'inactive'}>
-            {tab.content}
-          </div>
-        ))}
-      </div>
-    </div>
-
-
+            
                 <div className ="header">
                               <div className="header-items" >
                                
@@ -84,28 +62,11 @@ function Menu (props){
                             <em> 
                             <h2 className="combo">THỰC ĐƠN NHÀ HÀNG</h2>
                             </em>
-
+                    {/* category */}
                             <div>
                                 <TabPanelUI listcategory={listcategory} />
                             </div>
-                            {/* <div className="cate-item col=12">
-                                
-                                    <div className="item5555">
-                                        {listcategory?.map((item,index)=>{
-                                            return(
-                                                <div className="list-category" key={index} >
-                                                    <div > 
-                                                        <ul className="menu-item5555">
-                                                            <li>
-                                                                {item.name} 
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            )  
-                                        })}
-                                    </div>
-                            </div> */}
+                    
                             </div> 
                          </div>
                     <div className="products">
