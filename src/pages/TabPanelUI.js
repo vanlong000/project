@@ -6,6 +6,8 @@ import { getByCate } from '../redux/slice/getProductSlice';
 import { NavLink } from 'react-router-dom';
 import './body.css';
 import { hover } from '@testing-library/user-event/dist/hover';
+import { addToCart } from '../redux/slice/cartSlice';
+import { toast } from 'react-toastify';
 
 function TabPanelUI({listcategory}) {
   const [value, setValue] = React.useState(0);
@@ -76,7 +78,7 @@ function TabPanelUI({listcategory}) {
              <NavLink to={`/product_details/${item.id}`}><button>Chi Tiết</button></NavLink>
             </div>
             <div className='col-6' >
-             <NavLink to={`/product_details/${item.id}`}><button>Đặt Món</button></NavLink>
+             <button onClick={  ()=>{dispatch(addToCart(item) ,toast("thêm sản phẩm thành !"))}}><button>Đặt Món</button></button>
             </div>
            
             

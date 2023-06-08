@@ -12,7 +12,6 @@ export default function CartPage() {
   if(cart === 0 ) return <h1>undfind</h1>
   console.log(cart);
     return (
-        <React.Fragment>
      
          
             <section className="product spad">
@@ -54,7 +53,6 @@ export default function CartPage() {
                 </div>
             </section>
                
-        </React.Fragment>
         
     )
 }
