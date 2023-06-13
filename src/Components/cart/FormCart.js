@@ -2,9 +2,18 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { database } from "../../db";
 import UserContext from "../context/UserContext";
-export default function FormCart(props) {
+import styled from "@emotion/styled";
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import DatePicker from 'react-datepicker';
+import Datetime from 'react-datetime';
+import 'react-datetime/css/react-datetime.css';
+import 'react-datepicker/dist/react-datepicker.css';
+export default function FormCart({cart}) {
     const [pay, setPay] = useState([{}]);
+    const [open, setOpen] = useState(false);
+    const [value, setValue] = useState({});
     const {state, dispatch } = React.useContext(UserContext);
+
     const handleInput = (e) => {
         pay[e.target.name] = e.target.value;
         setPay(pay);
@@ -12,54 +21,93 @@ export default function FormCart(props) {
     }
     // const l = database.cartlist.length;
     // console.log(l);
-    const formSubmit = async (e) => {
-        // e.preventDefault();
-        console.log("submit success");
-        e.preventDefault(); 
-        database.ref('cartlist/1').set(pay);
-    }
+ 
+    if(cart.length === 0) return <h1>..undfind</h1>
+    let Sumtotal = cart.reduce( (total, currentValue) =>{
+        return total + currentValue.price;
+        }, 0);
+
+            const handleSubmit = (values) => {
+              // Xử lý logic khi submit form
+              console.log(values);
+              setValue(values)
+            };
+            
+const initialValues = {
+    hoten: '',
+    sodienthoai: '',
+    email: '',
+    coso: '',
+    diachi: '',
+    gio: '',
+    ngay: null,
+  }
+
+
     return (
         <div className="form ">
             
             <h6 className="text-bg-danger" style={{textAlign :"center"}}>Thông tin đặt hàng</h6>
       
-                 <form onSubmit={formSubmit}  className="custom-form contact-form row" action="#" method="post" role="form">
-                <div className="col-lg-6 col-6">
-                    <label for="contact-name" className="form-label">Họ và tên</label> 
-                    <input onChange={handleInput} type="text" name="contact-name" id="contact-name" className="form-control" placeholder="Tên của bạn" required />
-                </div>
+            
 
-                <div className="col-lg-6 col-6">
-                    <label for="contact-phone" className="form-label">Số điện thoại</label>
+            <Formik
+        initialValues={initialValues}
+        validationSchema=''
+        onSubmit={handleSubmit}
+      >
+        <Form>
+          <div className="col-12">
+            <label htmlFor="hoten">Họ tên:</label>
+            <Field type="text" id="hoten" name="hoten" />
+            <ErrorMessage name="hoten" component="div" />
+          </div >
 
-                    <input onChange={handleInput} type="telephone" name="contact-phone" id="contact-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" className="form-control" placeholder="(+84)123456789" />
-                </div>
+          <div className="col-12">
+            
+            <label htmlFor="sodienthoai">Số điện thoại:</label>
+            <Field type="text" id="sodienthoai" name="sodienthoai" />
+            <ErrorMessage name="sodienthoai" component="div" />
+          </div>
 
-                <div className="col-12">
-                    
-                    <label for="contact-email" className="form-label">Email</label>
+          <div className="col-12">
+            <label htmlFor="email">Email:</label>
+            <Field type="email" id="email" name="email" />
+            <ErrorMessage name="email" component="div" />
+          </div>
+          <div className="col-12">
+            <label htmlFor="diachi">dia chi:</label>
+            <Field type="text" id="text" name="text" />
+            <ErrorMessage name="text" component="div" />
+          </div>
+          <div>
 
-                    <input onChange={handleInput} type="email" name="contact-email" id="contact-email" pattern="[^ @]*@[^ @]*" className="form-control" placeholder="abc@gmail.com" required="" />
-                    
-                    <label for="contact-name" className="form-label">Địa chỉ</label>
+                            
 
-                    <input onChange={handleInput} type="text" name="contact-name" id="contact-name" className="form-control" placeholder="Địa chỉ" required />
+            <label htmlFor="coso">Cơ sở:</label>
+            <Field as="select" id="coso" name="coso">
+            <option defaultValue={"default"}>Vui lòng chọn địa chỉ nhà hàng</option>
+                        <option value='BÒ TƠ QUÁN MỘC CS1 HÀ NỘI'>BÒ TƠ QUÁN MỘC CS1 HÀ NỘI</option>
+                        <option value='BÒ TƠ QUÁN MỘC CS2 HÀ NỘI'>BÒ TƠ QUÁN MỘC CS2 HÀ NỘI</option>
+                        <option value='BÒ TƠ QUÁN MỘC CS1 SÀI GÒN'>BÒ TƠ QUÁN MỘC CS1 SÀI GÒN</option>
+                        <option value='BÒ TƠ QUÁN MỘC CS2 SÀI GÒN'>BÒ TƠ QUÁN MỘC CS2 SÀI GÒN</option>
+            </Field>
+            <ErrorMessage name="coso" component="div" />
+          </div>
 
-                    <label for="contact-address" className="form-label">Địa điểm nhà hàng</label>
+          <div>
 
-                    <select id="contact-address" className="form-control">
-                        <option defaultValue={"default"}>Vui lòng chọn địa chỉ nhà hàng</option>
-                        <option defaultValue={"default"}>BÒ TƠ QUÁN MỘC CS1 HÀ NỘI</option>
-                        <option defaultValue={"default"}>BÒ TƠ QUÁN MỘC CS2 HÀ NỘI</option>
-                        <option defaultValue={"default"}>BÒ TƠ QUÁN MỘC CS1 SÀI GÒN</option>
-                        <option defaultValue={"default"}>BÒ TƠ QUÁN MỘC CS2 SÀI GÒN</option>
-                    </select>
-                    <label for="contact-time" className="form-label">Thời gian ăn</label>
+          <div>
+            <label htmlFor="ngay">Ngày:</label>
+            <Field type="date" id="ngay" name="ngay" />
+            <ErrorMessage name="ngay" component="div" />
+          </div>
 
-                    <div className="form-group row p-3">
-                        <input onChange={handleInput} type="date" name="contact-time" id="contact-time" className="  form-control w-25 " required />
-                        <select onChange={handleInput} id="contact-hour" name="contact-hour" className=" form-control w-25 mx-5" required>
-                            {
+
+            <label htmlFor="gio">gio:</label>
+            <Field as="select" id="gio" name="gio">
+            <option defaultValue={"default"}>gio</option>
+            {
                                 [...Array(24).keys()].map((i) => {
                                     if (7 <= i && i <= 21) {
                                         return (
@@ -69,31 +117,73 @@ export default function FormCart(props) {
                                 })
 
                             }
-                        </select>
-                        <select onChange={handleInput} id="contact-minutes" name="contact-minute" className=" form-control w-25" required>
-                            {
-                                [...Array(60).keys()].map((i) => {
-                                    
-                                        return (
-                                            <option value={i} key={i}>{i} phút</option>
-                                        )
-                                    
-                                })
+            </Field>
+            <ErrorMessage name="gio" component="div" />
+            </div>
 
-                            }
-                        </select>
-                    </div>
-
-                    <label for="contact-message" className="form-label">Lời nhắn</label>
-
-                    <textarea onChange={handleInput} className="form-control" rows="5" id="contact-message" name="contact-message" placeholder="Bạn đang nghĩ gì..."></textarea>
-                </div>
-
-                <div className="col-lg-5 col-12 ms-auto">
+          <button  onClick={()=>{ setOpen(!open) }} type="submit">Đăng ký</button>
+        </Form>
+      </Formik>
                    
-                    <button type="submit" className="form-control">Tạo đơn hàng</button>
+                            {open &&  <div className="shadow"></div>}
+            {open && (
+
+                <div className="cart-pay">
+
+                    <div className="title">
+                        <h4> don hang</h4>
+                        <div onClick={()=>{ setOpen(!open) }}> X </div>
+                    </div>
+            <table class="table tabble2">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">ten mon</th>
+                            <th scope="col">thong tin mon</th>
+                            <th scope="col">tien</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {cart?.map((item,index)=>{
+                                                return  <tr>
+                                                <th scope="row">{index}</th>
+                                                <td>{item?.nameFood}</td>
+                                                <td>
+                                                    <img style={{ width:"100px",height: '100px' }} src={item.img} />
+                                                </td>
+                                                <td>{item?.price}</td>
+                                            </tr>
+                                            })}
+                        </tbody>
+                        </table>
+
+                        <div className="infoUser">
+                    <div>
+                    ho ten:  {value.hoten}
+                    </div>
+                    <div>
+                    so dien thoai:  {value.sodienthoai}
+                    </div>
+                    <div>
+                    emai:  {value.email}
+                    </div>
+                    <div>
+                    co so:  {value.coso}
+                    </div>
+                    <div>
+                   ngay:  {value.ngay}
+                    </div>
+                    <div>
+                   gio:  {value.gio}
+                    </div>
+                        </div>
+                        <div>
+                            tong tien : {Sumtotal}
+                        </div>
                 </div>
-            </form>
+
+            )}
         </div>
     )
 }
+

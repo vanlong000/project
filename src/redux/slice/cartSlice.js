@@ -1,10 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import * as React from "react";
+import { useDispatch } from "react-redux";
 const initialState = {
   cart: [],
   load: false,
   buy: [],
 };
+
 const cartSlice = createSlice({
   name: "cart",
   initialState,
@@ -67,6 +69,8 @@ const cartSlice = createSlice({
     },
   },
 });
+
+
 
 export const { addToCart, deleteCart, buyItem,decreaseQuantity, increaseQuantity } = cartSlice.actions;
 export default cartSlice.reducer;
