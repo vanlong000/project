@@ -48,8 +48,7 @@ export const getDonUser = createAsyncThunk(
      for (let newItem in responsive.data) {
        myArr1.push(responsive.data[newItem]);
      }
-
-     return myArr1;
+     return  myArr1;
     } catch (error) {
       console.log(error);
     }

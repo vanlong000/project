@@ -17,9 +17,6 @@ function Menu (props){
     setActiveTab(index);
   };
 
-  useEffect(() => {
-    dispatch(getDonUser());
-  }, []);
     useEffect(() => {
         dispatch(getFectProdust());
       }, []);

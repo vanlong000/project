@@ -12,6 +12,8 @@ import { NavLink } from "react-router-dom";
 export default function CartPage() {
  const dispatch = useDispatch();
     const { cart } = useSelector((state) => state.carts);
+    const { getDon } = useSelector((state) => state.products);
+
   if(cart === 0) return <h1>undfine...</h1>
 
         const handleDecreaseQuantity = (product) => {
@@ -28,15 +30,16 @@ export default function CartPage() {
     // Tăng số lượng đi 1
     dispatch(increaseQuantity(product.id));
   };
-  
     return (
      <section className="product spad">
                 <div className="container">
                 <div className="bodyCart">
+                <div className="bodyCart-child">
+              
                     <h2 className="bg-light-subtle mb-2" >Products List</h2>
                         { cart?.length > 0 ? cart.map((itemCart,index)=>{
                 return <>
-                <div key={index} className="main-cart row ">
+                <div key={index} className="main-cart  ">
               <table className="table">
                 <thead>
                   <th>STT</th>
@@ -51,9 +54,9 @@ export default function CartPage() {
                     <td ><h4 className="name-main-list"  > {itemCart.nameFood}</h4></td>
                     <td><div className="image-product-list"><img src={itemCart.img}/></div></td>
                     <td><div className="main-btn row" >
-                          <button className="add-button-main col-4"  onClick={() => handleDecreaseQuantity(itemCart)}><h3 style={{margin:-10}}>-</h3></button>
-                           <h3 className="add-button-main col-4">{itemCart?.quantity !== '' ? itemCart?.quantity : ''}</h3>
-                           <button className="add-button-main col-4" onClick={() => handleIncreaseQuantity(itemCart)}><h3 style={{margin:-10}}>+</h3></button>
+                          <button className="add-button-main col-4"  onClick={() => handleDecreaseQuantity(itemCart)}><div style={{margin:-10}}>-</div></button>
+                           <div className="add-button-main col-4">{itemCart?.quantity !== '' ? itemCart?.quantity : ''}</div>
+                           <button className="add-button-main col-4" onClick={() => handleIncreaseQuantity(itemCart)}><div style={{margin:-10}}>+</div></button>
                          </div>  
                     </td> 
                     <td ><h5 className="price-main-list" style = {{ background :"white",height: 200}} >{itemCart.price * itemCart?.quantity}</h5></td>
@@ -69,6 +72,8 @@ export default function CartPage() {
                 </>
             }) : <div> khong co san pham,<NavLink to='/menu'>   mua ngay</NavLink> </div>
             }
+            </div>
+
  <FormCart cart={cart} />
             </div>
                 </div>
