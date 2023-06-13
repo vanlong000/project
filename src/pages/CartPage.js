@@ -12,8 +12,8 @@ import { NavLink } from "react-router-dom";
 export default function CartPage() {
  const dispatch = useDispatch();
     const { cart } = useSelector((state) => state.carts);
+  if(cart === 0) return <h1>undfine...</h1>
 
-    console.log(cart);
         const handleDecreaseQuantity = (product) => {
        if (product.quantity === 1) {
       // Nếu số lượng là 1, xóa sản phẩm khỏi giỏ hàng
@@ -69,7 +69,7 @@ export default function CartPage() {
                 </>
             }) : <div> khong co san pham,<NavLink to='/menu'>   mua ngay</NavLink> </div>
             }
- <FormCart></FormCart>
+ <FormCart cart={cart} />
             </div>
                 </div>
             </section>
