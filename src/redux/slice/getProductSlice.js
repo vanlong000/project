@@ -10,6 +10,7 @@ const initialState = {
   productId : [] | null,
   listcategory:[]|null,
   cateProduct :[] | null,
+  getDon :[] | null,
   test :[] | null
 
 };
@@ -34,7 +35,26 @@ export const getFectProdust = createAsyncThunk(
     }
   }
 );
+export const getDonUser = createAsyncThunk(
+  "products/getDonUser",
+  async () => {
+    try {
+      const responsive = await axios.get(
+        'https://reactjst3h2212-default-rtdb.firebaseio.com/reactjst3h2212/.json'
 
+      );
+     const myArr1 = [];
+
+     for (let newItem in responsive.data) {
+       myArr1.push(responsive.data[newItem]);
+     }
+
+     return myArr1;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+);
 export const getcategory = createAsyncThunk(
   "products/getcategory",
   async () => {
@@ -120,6 +140,9 @@ const productsSlice = createSlice({
       }); 
       build.addCase(getCate.fulfilled, (state, action) => {
         state.test = action.payload;
+      }); 
+      build.addCase(getDonUser.fulfilled, (state, action) => {
+        state.getDon = action.payload;
       }); 
   },
 });

@@ -4,34 +4,33 @@ import { database } from "../../db";
 import UserContext from "../context/UserContext";
 import styled from "@emotion/styled";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import DatePicker from 'react-datepicker';
-import Datetime from 'react-datetime';
+import 'firebase/firestore';
+import { initializeApp } from "firebase/app";
+import 'firebase/auth';
+import { getAnalytics } from "firebase/analytics";
 import 'react-datetime/css/react-datetime.css';
 import 'react-datepicker/dist/react-datepicker.css';
+import { noteref } from "../../firebase";
+import { useSelector } from "react-redux";
 export default function FormCart({cart}) {
-    const [pay, setPay] = useState([{}]);
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState({});
-    const {state, dispatch } = React.useContext(UserContext);
-
-    const handleInput = (e) => {
-        pay[e.target.name] = e.target.value;
-        setPay(pay);
-        console.log(pay);
-    }
-    // const l = database.cartlist.length;
-    // console.log(l);
- 
+  
+    
+    const { getDon } = useSelector((state) => state.products);
     if(cart.length === 0) return <h1>..undfind</h1>
+    // if(getDon.length === 0) return <h1>..undfind</h1>
     let Sumtotal = cart.reduce( (total, currentValue) =>{
         return total + currentValue.price;
         }, 0);
 
             const handleSubmit = (values) => {
               // Xử lý logic khi submit form
-              console.log(values);
               setValue(values)
+              noteref.push(values)
             };
+            
+    console.log(getDon);
             
 const initialValues = {
     hoten: '',

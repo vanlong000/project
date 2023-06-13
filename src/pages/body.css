@@ -695,10 +695,10 @@ table tbody tr td .price-main-list{
 }
 .cart-pay{
     position: fixed;
-    top: 19vh;
+    top: 10vh;
     background-color: #fff;
     padding: 20px;
-    z-index: 10000;
+    z-index: 10000; 
     right: 40vw;
 
 }
