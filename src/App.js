@@ -12,7 +12,7 @@ import CartPage from './pages/CartPage';
 import Menu from './pages/Menu';
 import ProductDetails from './pages/ProductDetails';
 import { useDispatch } from 'react-redux';
-import { getFectProdust } from './redux/slice/getProductSlice';
+import { getDonUser, getFectProdust } from './redux/slice/getProductSlice';
 import { UserProvider } from './Components/context/UserContext';
 import reducer from '../src/Components/context/Reducer';
 import store from '../src/Components/context/Store';
@@ -22,6 +22,7 @@ import Menu2 from './pages/Menu2';
 // import { BrowserRouter, useLocation } from "react-router-dom";
 
 function App() {
+
   const localState = localStorage.getItem("state") ? JSON.parse(localStorage.getItem("state")) :store;
   const [state,dispatch] = useReducer(reducer,localState);  
   const display=state.isLoading ? "block":"none";

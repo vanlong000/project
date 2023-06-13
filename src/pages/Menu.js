@@ -3,7 +3,7 @@ import { NavLink} from 'react-router-dom';
 import Header from "../Components/ShareComponents/Header";
 
 import { useDispatch, useSelector } from "react-redux";
-import { getFectProdust, getcategory } from "../redux/slice/getProductSlice";
+import { getDonUser, getFectProdust, getcategory } from "../redux/slice/getProductSlice";
 import { useState } from "react";
 import { TabPanel } from "@mui/lab";
 import TabPanelUI from "./TabPanelUI";
@@ -17,7 +17,9 @@ function Menu (props){
     setActiveTab(index);
   };
 
-
+  useEffect(() => {
+    dispatch(getDonUser());
+  }, []);
     useEffect(() => {
         dispatch(getFectProdust());
       }, []);
