@@ -8,7 +8,9 @@ import { useState } from "react";
 import { TabPanel } from "@mui/lab";
 import TabPanelUI from "./TabPanelUI";
 import'./body.css';
-function Menu (props){
+
+import TabPanelUIcopy from "./TabPanelUIcopy";
+function Menu2 (props){
   const dispatch = useDispatch();
 
   const [activeTab, setActiveTab] = useState(0);
@@ -61,7 +63,7 @@ function Menu (props){
                     {/* category */}
                     
                             <div>
-                                <TabPanelUI listcategory={listcategory} />
+                                <TabPanelUIcopy listcategory={listcategory} />
                             </div>
                     
                             </div> 
@@ -72,14 +74,14 @@ function Menu (props){
                 
                 <div class="pagination">
                     <a href="#">&laquo;</a>
-                    <a class="active" href="#"><div><NavLink className="nav-link" to="/Menu">1</NavLink></div></a>
-                    <a href="#"><div><NavLink className="nav-link" to="/Menu2">2</NavLink></div></a>
-                   
-                    <a href="#"><div><NavLink className="nav-link" to="/Menu2">3</NavLink></div></a>
-                    <a href="#"><div><NavLink className="nav-link" to="/Menu2">4</NavLink></div></a>
-                    <a href="#"><div><NavLink className="nav-link" to="/Menu2">5</NavLink></div></a>
-                    <a href="#"><div><NavLink className="nav-link" to="/Menu2">6</NavLink></div></a>
-
+                    <a href="#"><div>
+                               
+                            </div></a>
+                    <a class="active" href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
                     <a href="#">&raquo;</a>
               </div>
               </div>
@@ -87,4 +89,4 @@ function Menu (props){
             
           
 )}
-        export default Menu;
+        export default Menu2;

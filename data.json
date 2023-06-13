@@ -1,6 +1,57 @@
 {
- 
- 
+  "Order": [
+    {
+      "address": "Số 2 Hoa Lư - Quận Hai Bà Trưng - Hà Nội",
+      "checked": true,
+      "comment": "no",
+      "date": "2023-06-15",
+      "email": "cm@gmail.com",
+      "guests": "2",
+      "hour": "10",
+      "id": 1,
+      "minutes": "3",
+      "name": "Huy",
+      "phone": "0947589566"
+    },
+    {
+      "address": "Biệt Thự D17, Ngõ 76 Nguyễn Phong Sắc",
+      "checked": true,
+      "comment": "có trẻ em",
+      "date": "2023-06-15",
+      "email": "thaott@gmail.com",
+      "guests": "5",
+      "hour": "8",
+      "id": 2,
+      "minutes": "10",
+      "name": "thao",
+      "phone": "0923454131"
+    },
+    null,
+    {
+      "address": "02 Đặng Dung Ba Đình",
+      "checked": true,
+      "comment": "ok",
+      "date": "2023-06-15",
+      "email": "hoangg@gmail.com",
+      "guests": "3",
+      "hour": "10",
+      "id": 4,
+      "minutes": "10",
+      "name": "Hoàng",
+      "phone": "0963645566"
+    }
+  ],
+  "cartlist": [
+    {
+      "contact-email": "ad@gmail.com",
+      "contact-hour": "8",
+      "contact-message": "doen",
+      "contact-minute": "1",
+      "contact-name": "hungw",
+      "contact-phone": "094-155-4567",
+      "contact-time": "2023-06-15"
+    }
+  ],
   "categories": [
     {
       "id": 1,
@@ -50,7 +101,31 @@
       "id": 12,
       "name": "RƯỢU"
     }
-  ],"productsCate": [
+  ],
+  "demo": {
+    "-NXnuUlDxlpeSnhX3IXx": {
+      "12": {
+        "id": 13,
+        "name": "ĐỒ NHÚNG LẨU"
+      }
+    }
+  },
+  "order": [
+    {
+      "address": "102 Thái Thịnh ",
+      "checked": true,
+      "comment": "done",
+      "date": "2023-06-15",
+      "email": "huycc@gmail.com",
+      "guests": "5",
+      "hour": "10",
+      "id": 1,
+      "minutes": "7",
+      "name": "Huy",
+      "phone": "0923451234"
+    }
+  ],
+  "productsCate": [
     {
       "describe": "450Gr thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh ",
       "id": 34,
@@ -58,13 +133,13 @@
       "name": "TẤT CẢ",
       "nameFood": "Steak Thịt Vai Wagyu (450Gr)",
       "price": 390000,
-      
       "review": " 67 Đánh Giá Món Ăn",
       "reviewDemo": 4.5,
       "start": "01/01/2023"
     },
     {
       "id": 2,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh ",
       "img": "../images/product/daubep.jpg",
       "name": "TẤT CẢ",
       "nameFood": "Đầu Bếp Carpaccio (Nhật Bản)",
@@ -75,6 +150,7 @@
     },
     {
       "id": 3,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/combo2.jpg",
       "name": "TẤT CẢ",
       "nameFood": "Combo Bò Wagyu Đặc Biệt",
@@ -95,9 +171,10 @@
     },
     {
       "id": 5,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/macao.jpg",
       "name": "TẤT CẢ",
-      "nameFood": "Bò Áp Chảo Macau",
+      "nameFood": "Bò Áp Chảo Macau (450gr) ",
       "price": 270000,
       "review": "23 Đánh Giá Món Ăn",
       "reviewDemo": 4.6,
@@ -105,9 +182,10 @@
     },
     {
       "id": 6,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/bbq.jpg",
       "name": "TẤT CẢ",
-      "nameFood": "Sườn Bò Nướng Sốt BBQ",
+      "nameFood": "Sườn Bò Nướng Sốt BBQ (500gr)",
       "price": 560000,
       "review": " 76 Đánh Giá Món Ăn",
       "reviewDemo": 5,
@@ -115,9 +193,10 @@
     },
     {
       "id": 7,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/bbt.jpg",
       "name": "TẤT CẢ",
-      "nameFood": "Bò Bít Tết (Beef Steak)",
+      "nameFood": "Bò Bít Tết (Beef Steak) 'Sale 30%'",
       "price": 250000,
       "review": "45 Đánh Giá Món Ăn",
       "reviewDemo": 4.1,
@@ -125,9 +204,10 @@
     },
     {
       "id": 8,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/hinh1a.jpg",
       "name": "TẤT CẢ",
-      "nameFood": "Steak Thịt Vai Wagyu ",
+      "nameFood": "Steak Thịt Vai Wagyu (370gr)",
       "price": 540000,
       "review": "89 Đánh Giá Món Ăn",
       "reviewDemo": 4.5,
@@ -135,9 +215,10 @@
     },
     {
       "id": 9,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/thanbo.jpg",
       "name": "TẤT CẢ",
-      "nameFood": "Steak Thăn Bò (450Gr)",
+      "nameFood": "Steak Thăn Bò (450Gr) 'Sale 30%'",
       "price": 820000,
       "review": "98 Đánh Giá Món Ăn",
       "reviewDemo": 4.7,
@@ -145,9 +226,10 @@
     },
     {
       "id": 10,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/bbq2.jpg",
-      "name": "TẤT CẢ",
-      "nameFood": "Bò Bít Tết (Châu Âu)",
+      "name": "BÒ NHẬP KHẨU",
+      "nameFood": "Bò Bít Tết (Châu Âu) 'Sale 15%'",
       "price": 650000,
       "review": "90 Đánh Giá Món Ăn",
       "reviewDemo": 4.8,
@@ -155,9 +237,10 @@
     },
     {
       "id": 11,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/bbq3.jpg",
-      "name": "TẤT CẢ",
-      "nameFood": "Bò Nướng Tảng",
+      "name": "BÒ NHẬP KHẨU",
+      "nameFood": "Bò Nướng Tảng (350gr) 'Sale 30%'",
       "price": 420000,
       "review": "54 Đánh Giá Món Ăn",
       "reviewDemo": 4.9,
@@ -165,9 +248,10 @@
     },
     {
       "id": 12,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/hot.jpg",
       "name": "HOT",
-      "nameFood": "Bò Nướng BBQ",
+      "nameFood": "Bò Nướng BBQ (Nướng Than Hoa)",
       "price": 340000,
       "review": " 56 Đánh Giá Món Ăn",
       "reviewDemo": 4.5,
@@ -175,9 +259,10 @@
     },
     {
       "id": 13,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/hot1.jpg",
       "name": "HOT",
-      "nameFood": "BBQ + Sốt Thái",
+      "nameFood": "Bò Nướng BBQ + Sốt Thái (450gr)",
       "price": 340000,
       "review": " 26 Đánh Giá Món Ăn",
       "reviewDemo": 4.1,
@@ -185,9 +270,10 @@
     },
     {
       "id": 14,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/hot2.jpg",
       "name": "HOT",
-      "nameFood": "Bò Hoàng Gia",
+      "nameFood": "Bò Hoàng Gia (Nhập Khẩu Anh Quốc)",
       "price": 340000,
       "review": " 56 Đánh Giá Món Ăn",
       "reviewDemo": 4.5,
@@ -195,9 +281,10 @@
     },
     {
       "id": 15,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/hot3.jpg",
       "name": "HOT",
-      "nameFood": "KING BBQ",
+      "nameFood": "KING BBQ (Món Bắc Âu) 'Sale 15%'",
       "price": 340000,
       "review": " 56 Đánh Giá Món Ăn",
       "reviewDemo": 4.5,
@@ -205,9 +292,10 @@
     },
     {
       "id": 16,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/bbq.jpg",
       "name": "HOT",
-      "nameFood": "Bò Mỹ",
+      "nameFood": "Bò Mỹ Áp Chảo Chín (350gr)'Sale 20%'",
       "price": 340000,
       "review": " 56 Đánh Giá Món Ăn",
       "reviewDemo": 4.5,
@@ -215,9 +303,10 @@
     },
     {
       "id": 17,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/hot4.jpg",
       "name": "HOT",
-      "nameFood": "Sườn Bò Nướng BBQ",
+      "nameFood": "Sườn Bò Nướng BBQ (450gr) 'Sale 5%'",
       "price": 340000,
       "review": " 56 Đánh Giá Món Ăn",
       "reviewDemo": 4.5,
@@ -235,9 +324,10 @@
     },
     {
       "id": 19,
+      "describe": " thịt bò + 1gr Muối tinh +1 gr Tiêu Xanh + Dầu Oliu ",
       "img": "../images/product/chef.jpg",
       "name": "TẤT CẢ",
-      "nameFood": "Bò Sốt Tiêu Đen",
+      "nameFood": "Bò Sốt Tiêu Đen (250gr) 'Sale 30%'",
       "price": 390000,
       "review": "Đánh Giá Món Ăn1",
       "reviewDemo": 20,
@@ -263,16 +353,7 @@
       "reviewDemo": 5,
       "start": "01/01/2023"
     },
-    {
-      "id": 34,
-      "img": "C:\\fakepath\\0374c-16379493187334-1920.jpg",
-      "name": "HOT",
-      "nameFood": "Bò Hoàng Gia",
-      "price": 340000,
-      "review": " 56 Đánh Giá Món Ăn",
-      "reviewDemo": "4.5",
-      "start": "2023-06-01"
-    },
+   
     {
       "id": 23,
       "img": "../images/product/pas.jpg",
@@ -287,7 +368,7 @@
       "id": 24,
       "img": "../images/product/bbq4.jpg",
       "name": "BÒ KOBE",
-      "nameFood": "Bò Tái",
+      "nameFood": "Bò Tái + Sốt Hàn (450gr) 'Sale 18%'",
       "price": 340000,
       "review": " 56 Đánh Giá Món Ăn",
       "reviewDemo": 4.5,
@@ -307,7 +388,7 @@
       "id": 26,
       "img": "../images/product/bbq3.jpg",
       "name": "BÒ KOBE",
-      "nameFood": "Bò Nướng Tảng",
+      "nameFood": "Bò Nướng Tảng + Rau Củ (330gr)",
       "price": 420000,
       "review": "54 Đánh Giá Món Ăn",
       "reviewDemo": 4.9,
@@ -377,37 +458,28 @@
       "id": 33,
       "img": "../images/product/salat2.jpg",
       "name": "SALAT",
-      "nameFood": "Salad Cà Chua ",
+      "nameFood": "Salad Cà Chua + Rau Củ 'Sale 20%' ",
       "price": 550000,
       "review": " 98 Đánh Giá Món Ăn",
       "reviewDemo": 4.1,
       "start": "03/01/2023"
     },
     {
-      "id": 34,
+      "id": 35,
       "img": "../images/product/salat3.jpg",
       "name": "SALAT",
-      "nameFood": "SALAD HOA QUẢ",
+      "nameFood": "Salat Hoa Quả Nhiệt Đới 'Sale 10%'",
       "price": 550000,
       "review": "76 Đánh Giá Món Ăn",
       "reviewDemo": 4.8,
       "start": "03/01/2023"
     },
-    {
-      "id": 59,
-      "img": "../images/product/salat3.jpg",
-      "name": "TẤT CẢ",
-      "nameFood": "SALAD HOA QUẢ",
-      "price": 550000,
-      "review": "76 Đánh Giá Món Ăn",
-      "reviewDemo": 4.8,
-      "start": "03/01/2023"
-    },
+    null,
     {
       "id": 36,
       "img": "../images/product/salat8.jpg",
       "name": "SALAT",
-      "nameFood": " SALAD TÔM SÚ",
+      "nameFood": " Salat Tôm Sú Tái Chanh 'Sale 15%'",
       "price": 550000,
       "review": "32 Đánh Giá Món Ăn",
       "reviewDemo": 4.7,
@@ -417,7 +489,7 @@
       "id": 37,
       "img": "../images/product/salat9.jpg",
       "name": "SALAT",
-      "nameFood": " SALAD RONG BIỂN TRỨNG CUA",
+      "nameFood": " Salat Trứng Cua Rong Biển",
       "price": 550000,
       "review": " 32 Đánh Giá Món Ăn",
       "reviewDemo": 4.2,
@@ -427,7 +499,7 @@
       "id": 38,
       "img": "../images/product/salat4.jpg",
       "name": "SALAT",
-      "nameFood": "Salat Ý",
+      "nameFood": "Salat Ý (Trái Cây + Dầu Oliu) 'Sale 12%' ",
       "price": 550000,
       "review": " 90 Đánh Giá Món Ăn",
       "reviewDemo": 4.3,
@@ -447,7 +519,7 @@
       "id": 40,
       "img": "../images/product/khaivi2.jpg",
       "name": "KHAI VỊ",
-      "nameFood": "Gỏi Củ Hủ Dừa",
+      "nameFood": "Gỏi Củ Hủ Dừa (Tôm Sú + Dừa)",
       "price": 180000,
       "review": " 65 Đánh Giá Món Ăn",
       "reviewDemo": 4.2,
@@ -457,7 +529,7 @@
       "id": 41,
       "img": "../images/product/khaivi3.jpg",
       "name": "KHAI VỊ",
-      "nameFood": " Gỏi Ngó Sen Tôm Thịt",
+      "nameFood": " Gỏi Ngó Sen Tôm Thịt 'Sale 20%'",
       "price": 180000,
       "review": "Đánh Giá Món Ăn3",
       "reviewDemo": 4.7,
@@ -467,7 +539,7 @@
       "id": 42,
       "img": "../images/product/khaivi4.jpg",
       "name": "KHAI VỊ",
-      "nameFood": "Gỏi Bò Mè Bóp Thấu",
+      "nameFood": "Gỏi Bò Mè Bóp Thấu 'Sale 10%'",
       "price": 180000,
       "review": "68 Đánh Giá Món Ăn",
       "reviewDemo": 4.8,
@@ -477,7 +549,7 @@
       "id": 43,
       "img": "../images/product/khaivi5.jpg",
       "name": "KHAI VỊ",
-      "nameFood": " Gỏi Bưởi Tôm Mực",
+      "nameFood": " Gỏi Tiến Vua Tôm Thịt + Bánh Phồng",
       "price": 180000,
       "review": "11 Đánh Giá Món Ăn",
       "reviewDemo": 4.5,
@@ -487,22 +559,13 @@
       "id": 44,
       "img": "../images/product/khaivi6.jpg",
       "name": "KHAI VỊ",
-      "nameFood": "Gỏi Miến Trộn Tôm Thịt",
+      "nameFood": "Gỏi Miến Trộn Tôm Thịt 'Sale 20%'",
       "price": 180000,
       "review": " 54 Đánh Giá Món Ăn",
       "reviewDemo": 4.1,
       "start": "03/01/2023"
     },
-    {
-      "id": 45,
-      "img": "../images/product/khaivi7.jpg",
-      "name": "KHAI VỊ",
-      "nameFood": "Gỏi Tiến Vua Tôm Thịt + Bánh Phồng ",
-      "price": 180000,
-      "review": " 60 Đánh Giá Món Ăn",
-      "reviewDemo": 4.1,
-      "start": "03/01/2023"
-    },
+    
     {
       "id": 46,
       "img": "../images/product/daubep.jpg",
@@ -517,17 +580,17 @@
       "id": 47,
       "img": "../images/product/hinh1.jpg",
       "name": "HOT",
-      "nameFood": "Bò Bằm Sốt Tiêu & Kem",
+      "nameFood": "Bò Bằm Sốt Tiêu & Kem (420gr)",
       "price": 320000,
-      "review": "Đánh Giá Món Ăn3",
-      "reviewDemo": 48,
+      "review": " 64 Đánh Giá Món Ăn",
+      "reviewDemo": "4.8",
       "start": "03/01/2023"
     },
     {
       "id": 48,
       "img": "../images/product/susi.jpg",
       "name": "CƠM-MỲ",
-      "nameFood": "SUSHI Quấn Thịt Bò,",
+      "nameFood": "SUSHI Quấn Thăn Bò 'Sale 20%'",
       "price": 150000,
       "review": "11 Đánh Giá Món Ăn",
       "reviewDemo": 4.1,
@@ -536,8 +599,8 @@
     {
       "id": 49,
       "img": "../images/product/susi1.jpg",
-       "name": "CƠM-MỲ",
-      "nameFood": "Cơm Cuộn Bò Mỹ",
+      "name": "CƠM-MỲ",
+      "nameFood": "Cơm Cuộn Bò Mỹ + Sốt Tiêu Đen",
       "price": 50000,
       "review": "22 Đánh Giá Món Ăn",
       "reviewDemo": 4,
@@ -546,8 +609,8 @@
     {
       "id": 50,
       "img": "../images/product/susi2.jpg",
-       "name": "CƠM-MỲ",
-      "nameFood": "SUSHI",
+      "name": "CƠM-MỲ",
+      "nameFood": "SUSHI ( Rong Biển + Xì Dầu Mù Tạp )",
       "price": 210000,
       "review": " 56 Đánh Giá Món Ăn",
       "reviewDemo": 4.8,
@@ -557,7 +620,7 @@
       "id": 51,
       "img": "../images/product/my2.jpg",
       "name": "CƠM-MỲ",
-      "nameFood": "Mì Spaghetti Bò Bằm",
+      "nameFood": "Mì Spaghetti Bò Bằm (Sốt Cay)",
       "price": 150000,
       "review": " 65 Đánh Giá Món Ăn",
       "reviewDemo": 4.8,
@@ -566,27 +629,26 @@
     {
       "id": 52,
       "img": "../images/product/my3.jpg",
-       "name": "CƠM-MỲ",
-      "nameFood": "Mỳ Ống Ý",
+      "name": "CƠM-MỲ",
+      "nameFood": "Mỳ Ống Ý ( Thịt Bò Băm + Mỳ Ống)",
       "price": 250000,
       "review": "89 Đánh Giá Món Ăn",
       "reviewDemo": 4.1,
       "start": "03/01/2023"
     },
-    
     {
       "id": 53,
       "img": "../images/product/my1.jpg",
       "name": "CƠM-MỲ",
-     "nameFood": "Mỳ Ống Trộn Cà Chua Bi Và Phô Mai",
-     "price": 90000,
-     "review": " 121 Đánh Giá Món Ăn",
-     "reviewDemo": 48,
-     "start": "03/01/2023"
-     
+      "nameFood": "Mỳ Ống Trộn Cà Chua Bi Và Phô Mai",
+      "price": 90000,
+      "review": " 121 Đánh Giá Món Ăn",
+      "reviewDemo": "4.8",
+      "start": "03/01/2023"
     },
     {
       "id": 54,
+      "describe": " Kem + Trái Cây Nhiệt Đới ",
       "img": "../images/product/traicay.jpg",
       "name": "TẤT CẢ",
       "nameFood": "Hoa Quả Tráng Miệng - Kem Trái Cây",
@@ -609,22 +671,37 @@
       "id": 56,
       "img": "../images/product/traicay.jpg",
       "name": "TRÁNG MIỆNG",
-      "nameFood": "Thố Kem Trái Cây",
+      "nameFood": "Hoa Quả Tráng Miệng - Thố Kem Trái Cây",
       "price": 160000,
       "review": "Đánh Giá Món Ăn",
       "reviewDemo": 4.2,
       "start": "03/01/2023"
     },
     {
-      "id": 67,
+      "id": 57,
       "img": "../images/product/traicay1.jpg",
       "name": "TRÁNG MIỆNG",
-      "nameFood": "HOA QUẢ",
+      "nameFood": "Hoa Quả Tráng Miệng - Kem Hoa Quả",
       "price": 99,
       "review": "12 Đánh Giá Món Ăn",
       "reviewDemo": 4.3,
       "start": "03/01/2023"
     }
-   
+  ],
+  "user": [
+    {
+      "email": "longdragon@gmail.com",
+      "id": 1,
+      "name": "admin",
+      "password": 123456,
+      "phone": "0123424571"
+    },
+    {
+      "email": "hitle@gmail.com",
+      "id": 2,
+      "name": "karamel",
+      "password": "654321",
+      "phone": "0836765743"
+    }
   ]
 }

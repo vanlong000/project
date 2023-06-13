@@ -9,9 +9,9 @@ import { hover } from '@testing-library/user-event/dist/hover';
 import { addToCart } from '../redux/slice/cartSlice';
 import { ToastContainer, toast } from 'react-toastify';
 
-function TabPanelUI({listcategory}) {
+function TabPanelUIcopy({listcategory}) {
   const [value, setValue] = React.useState(0);
-  const [listCaterolyA, setListCateroly] = useState("TẤT CẢ");
+  const [listCaterolyA, setListCateroly] = useState("SALAT");
   const dispatch = useDispatch();
   const { productId } = useSelector((state) => state.products);
   useEffect(() => {
@@ -81,7 +81,7 @@ function TabPanelUI({listcategory}) {
                                             <i className="bi-star-fill reviews-icon"></i>
                                         </div>
                                         <div className="dish-title">
-                                            <h5 className="h3-title">{item.nameFood}</h5>
+                                            <h5 className="h3-title">{item.nameFood}(Sale 30%)</h5>
                                             <e>{item.review } </e>
                                         </div>
                                         <div className="dish-info">
@@ -192,4 +192,4 @@ function TabPanelUI({listcategory}) {
   );
 }
 
-export default TabPanelUI
+export default TabPanelUIcopy
