@@ -4,10 +4,9 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React, { useState } from "react";
 import 'react-datepicker/dist/react-datepicker.css';
 import 'react-datetime/css/react-datetime.css';
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import * as Yup from 'yup';
 import { noteref } from "../../firebase";
-import { getFectProdust } from "../../redux/slice/getProductSlice";
 export default function FormCart({cart}) {
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState({});
@@ -199,9 +198,9 @@ const initialValues = {
                    dsads {value.totalAll}
                         </div>
                         <div>
-                            tong tien : {Sumtotal }
+                            tong tien : {Sumtotal * Sumtotal2}
                         </div>
-                        <button onClick={()=> {  setOpen(!open); setOder(  oder + 1 ) }} type="submit"> xác nhận</button>
+                        <button onClick={()=> {  setOpen(!open); setOder(  oder + 1 ) }} type="submit"> xác nhân</button>
                 </div>
 
             )}

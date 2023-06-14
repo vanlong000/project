@@ -1,10 +1,8 @@
 import React from "react";
-import TableCart from "../Components/cart/TableCart";
-import Footer from "../Components/ShareComponents/Footer"
-import FormCart from "../Components/cart/FormCart";
 import { useDispatch, useSelector } from "react-redux";
-import { decreaseQuantity, deleteCart, increaseQuantity } from "../redux/slice/cartSlice";
 import { NavLink } from "react-router-dom";
+import FormCart from "../Components/cart/FormCart";
+import { decreaseQuantity, deleteCart, increaseQuantity } from "../redux/slice/cartSlice";
 
 
 
@@ -17,7 +15,7 @@ export default function CartPage() {
   if(cart === 0) return <h1>undfine...</h1>
 
         const handleDecreaseQuantity = (product) => {
-       if (product.quantity === 1) {
+       if (product.quantity === 1) {  
       // Nếu số lượng là 1, xóa sản phẩm khỏi giỏ hàng
        dispatch(deleteCart(product.id));
        } else {
@@ -38,6 +36,7 @@ export default function CartPage() {
               
                     <h2 className="bg-light-subtle mb-2" >Products List</h2>
                         { cart?.length > 0 ? cart.map((itemCart,index)=>{
+                           const newIndex = index + 1;
                 return <>
                 <div key={index} className="main-cart  ">
               <table className="table">
@@ -50,7 +49,7 @@ export default function CartPage() {
                   </thead>       
                 <tbody>
                   <tr >
-                    <td><div className="name-product-list">{itemCart.id}</div></td>
+                    <td><div className="name-product-list">{index}</div></td>
                     <td ><h4 className="name-main-list"  > {itemCart.nameFood}</h4></td>
                     <td><div className="image-product-list"><img src={itemCart.img}/></div></td>
                     <td><div className="main-btn row" >
