@@ -516,7 +516,7 @@ table tbody tr td .image-product-list{
 }
 table tbody tr td .name-main-list{
     display: flex;
-        /* width: 300px; */
+        width: 200px;
 }
 table tbody tr td .price-main-list{
     display: flex;
@@ -792,4 +792,10 @@ padding-bottom: 30px;
   }
   .admin .table td {
 padding-top: 20px;
+  }
+  .Toastify__close-button--light{
+    width: 10% !important;
+  }
+  .main-cart table th {
+    width: 6%;
   }
