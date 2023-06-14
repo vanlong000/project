@@ -138,7 +138,7 @@ const initialValues = {
             </div>
             </div>
       
-          <button  onClick={()=>{ setOpen(!open)  }} >Đăng ký</button>
+          <button  onClick={()=>{ setOpen(!open)  }} >đặt đơn</button>
           {open &&  <div className="shadow"></div>}
             {open && (
 
@@ -199,9 +199,9 @@ const initialValues = {
                    dsads {value.totalAll}
                         </div>
                         <div>
-                            tong tien : {Sumtotal}
+                            tong tien : {Sumtotal }
                         </div>
-                        <button onClick={()=> {  setOpen(!open); setOder(  oder + 1 ) }} type="submit"> dat dot </button>
+                        <button onClick={()=> {  setOpen(!open); setOder(  oder + 1 ) }} type="submit"> xác nhận</button>
                 </div>
 
             )}

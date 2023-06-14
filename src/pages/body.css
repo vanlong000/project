@@ -777,6 +777,7 @@ padding-bottom: 30px;
   .bodyCart{
     display: flex;
     justify-content: space-between;
+    gap: 40px;
   }
   .table td{
     padding-top: 50px;
