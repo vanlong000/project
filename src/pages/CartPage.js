@@ -15,7 +15,7 @@ export default function CartPage() {
   if(cart === 0) return <h1>undfine...</h1>
 
         const handleDecreaseQuantity = (product) => {
-       if (product.quantity === 1) {
+       if (product.quantity === 1) {  
       // Nếu số lượng là 1, xóa sản phẩm khỏi giỏ hàng
        dispatch(deleteCart(product.id));
        } else {
