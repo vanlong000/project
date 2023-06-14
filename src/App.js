@@ -18,22 +18,28 @@ import reducer from '../src/Components/context/Reducer';
 import store from '../src/Components/context/Store';
 import AboutPage from './pages/AboutPage';
 import Menu2 from './pages/Menu2';
+import { Admin } from './pages/Admin';
 
 // import { BrowserRouter, useLocation } from "react-router-dom";
 
 function App() {
 
   const localState = localStorage.getItem("state") ? JSON.parse(localStorage.getItem("state")) :store;
-  const [state,dispatch] = useReducer(reducer,localState);  
-  const display=state.isLoading ? "block":"none";
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getDonUser());
+  }, []);
   return (
-    <UserProvider value={{state,dispatch}}>
+
     <div>
     <Header/>
     <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path="/Blog" element={<Blog/>}/>
     <Route path="/Menu" element={<Menu/>}/>
+    <Route path="/admin" element={<Admin/>}/>
     <Route path="/BlogDetail1" element={<BlogDetail1/>}/>
     <Route path="/BlogDetail0" element={<BlogDetail0/>}/>
     <Route path="/Contact" element={<Contact/>}/>
@@ -44,7 +50,7 @@ function App() {
     </Routes>
     <Footer/> 
     </div>
-    </UserProvider>
+ 
   )
 }
 
