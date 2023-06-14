@@ -73,7 +73,7 @@ export default function CartPage() {
             }
             </div>
 
- <FormCart cart={cart} />
+ <FormCart cart={cart} total={}/>
             </div>
                 </div>
             </section>

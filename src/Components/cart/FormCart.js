@@ -7,6 +7,7 @@ import 'react-datetime/css/react-datetime.css';
 import { useSelector } from "react-redux";
 import * as Yup from 'yup';
 import { noteref } from "../../firebase";
+import { ToastContainer,toast } from 'react-toastify';
 export default function FormCart({cart}) {
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState({});
@@ -16,12 +17,17 @@ export default function FormCart({cart}) {
     const { getDon } = useSelector((state) => state.products);
     if(cart?.length === 0) return <h1>..undfind</h1>
     let Sumtotal = cart?.reduce( (total, currentValue) =>{
-        return total + currentValue.price;
+        return total + currentValue.price * currentValue?.quantity;
         }, 0);
         let Sumtotal2 = cart?.reduce( (total, currentValue) =>{
-            return total + currentValue.quantity
+            if(currentValue.quantity === 1 ){
+                return    currentValue.quantity
+            }else{
+                return total + currentValue.quantity
+            }
             ;
             }, 0);
+            //  total={itemCart.price * itemCart?.quantity}
             const handleSubmit = (values) => {
 
               // Xử lý logic khi submit form
@@ -29,12 +35,12 @@ export default function FormCart({cart}) {
                 const objNote = {
                     data : values,
                     oder : oder,
-                    tatalOder:Sumtotal * Sumtotal2
+                    tatalOder:Sumtotal
                     
                 }
               noteref.push(objNote)
             };
-
+            console.log(Sumtotal);
         
     const validationSchema = Yup.object({
         hoten: Yup.string().required('Vui lòng nhập họ tên'),
@@ -198,17 +204,27 @@ const initialValues = {
                    dsads {value.totalAll}
                         </div>
                         <div>
-                            tong tien : {Sumtotal * Sumtotal2}
+                            tong tien : {Sumtotal}
                         </div>
-                        <button onClick={()=> {  setOpen(!open); setOder(  oder + 1 ) }} type="submit"> xác nhân</button>
+                        <button onClick={()=> {  setOpen(!open); setOder(  oder + 1 ) ;toast("đặt đơn thành công!")  } } type="submit"> xác nhân</button>
+              
                 </div>
 
             )}
         </Form>
       </Formik>
-                   
+      <ToastContainer position="top-center"
+                                                        autoClose={3000}
+                                                        hideProgressBar={false}
+                                                        newestOnTop={false}
+                                                        closeOnClick
+                                                        rtl={false}
+                                                        pauseOnFocusLoss
+                                                        draggable
+                                                        pauseOnHover
+                                                        color='green'
+                                                        theme="light" />         
                
         </div>
     )
 }
-
