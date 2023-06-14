@@ -199,9 +199,9 @@ const initialValues = {
                    dsads {value.totalAll}
                         </div>
                         <div>
-                            tong tien : {Sumtotal }
+                            tong tien : {Sumtotal * Sumtotal2}
                         </div>
-                        <button onClick={()=> {  setOpen(!open); setOder(  oder + 1 ) }} type="submit"> xác nhận</button>
+                        <button onClick={()=> {  setOpen(!open); setOder(  oder + 1 ) }} type="submit"> xác nhân</button>
                 </div>
 
             )}
